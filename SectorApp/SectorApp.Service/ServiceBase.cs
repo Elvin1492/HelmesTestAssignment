@@ -26,7 +26,6 @@ namespace SectorApp.Service
             Repository = repository;
         }
 
-
         public IEnumerable<TEntity> Get()
         {
             using (UnitOfWork.Context.Database.BeginTransaction())
@@ -35,8 +34,6 @@ namespace SectorApp.Service
                 return result;
             }
         }
-
-
 
         public TEntity GetSingle(int id)
         {
