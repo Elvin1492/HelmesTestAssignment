@@ -15,8 +15,8 @@ namespace SectorApp.DataAccess.Models
         {
         }
 
-        public virtual DbSet<AppUsers> AppUsers { get; set; }
-        public virtual DbSet<Sectors> Sectors { get; set; }
+        public virtual DbSet<AppUser> AppUsers { get; set; }
+        public virtual DbSet<Sector> Sectors { get; set; }
         public virtual DbSet<UsersSectors> UsersSectors { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -32,14 +32,14 @@ namespace SectorApp.DataAccess.Models
         {
             modelBuilder.HasAnnotation("ProductVersion", "2.2.6-servicing-10079");
 
-            modelBuilder.Entity<AppUsers>(entity =>
+            modelBuilder.Entity<AppUser>(entity =>
             {
                 entity.Property(e => e.Name)
                     .IsRequired()
                     .HasMaxLength(50);
             });
 
-            modelBuilder.Entity<Sectors>(entity =>
+            modelBuilder.Entity<Sector>(entity =>
             {
                 entity.Property(e => e.Name)
                     .IsRequired()

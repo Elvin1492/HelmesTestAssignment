@@ -3,14 +3,13 @@ using System.Collections.Generic;
 
 namespace SectorApp.DataAccess.Models
 {
-    public partial class AppUsers
+    public partial class AppUser: EntityBase
     {
-        public AppUsers()
+        public AppUser()
         {
             UsersSectors = new HashSet<UsersSectors>();
         }
 
-        public int Id { get; set; }
         public string Name { get; set; }
 
         public virtual ICollection<UsersSectors> UsersSectors { get; set; }

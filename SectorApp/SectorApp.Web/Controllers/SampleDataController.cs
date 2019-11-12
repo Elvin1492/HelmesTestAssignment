@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SectorApp.DataAccess.Models;
+using SectorApp.Service;
 
 namespace SectorApp.Web.Controllers
 {
@@ -11,14 +12,17 @@ namespace SectorApp.Web.Controllers
     public class SampleDataController : Controller
     {
         private SectorAppContext _sectorAppContext;
+        private IAppUserService _appUserService;
+
         private static string[] Summaries = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        public SampleDataController(SectorAppContext sectorAppContext)
+        public SampleDataController(SectorAppContext sectorAppContext, IAppUserService appUserService)
         {
             _sectorAppContext = sectorAppContext;
+            _appUserService = appUserService;
         }
 
         [HttpGet("[action]")]
@@ -34,9 +38,10 @@ namespace SectorApp.Web.Controllers
         }
 
         [HttpGet("[action]")]
-        public List<AppUsers> GetSectors()
+        public List<AppUser> GetSectors()
         {
-            var result = _sectorAppContext.AppUsers;
+            //var result = _sectorAppContext.AppUsers;
+            var result = _appUserService.Get();
             return result.ToList();
         }
 
@@ -46,13 +51,7 @@ namespace SectorApp.Web.Controllers
             public int TemperatureC { get; set; }
             public string Summary { get; set; }
 
-            public int TemperatureF
-            {
-                get
-                {
-                    return 32 + (int)(TemperatureC / 0.5556);
-                }
-            }
+            public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
         }
     }
 }

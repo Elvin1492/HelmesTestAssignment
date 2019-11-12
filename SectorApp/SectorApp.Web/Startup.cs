@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SectorApp.DataAccess.Models;
+using SectorApp.Web.Infrastructure.StartUpExtensions;
 
 namespace SectorApp.Web
 {
@@ -30,6 +31,8 @@ namespace SectorApp.Web
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddProjectDependencies(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -3,19 +3,18 @@ using System.Collections.Generic;
 
 namespace SectorApp.DataAccess.Models
 {
-    public partial class Sectors
+    public partial class Sector : EntityBase
     {
-        public Sectors()
+        public Sector()
         {
-            InverseParent = new HashSet<Sectors>();
+            InverseParent = new HashSet<Sector>();
         }
 
-        public int Id { get; set; }
         public string Name { get; set; }
         public int? ParentId { get; set; }
 
-        public virtual Sectors Parent { get; set; }
+        public virtual Sector Parent { get; set; }
         public virtual UsersSectors UsersSectors { get; set; }
-        public virtual ICollection<Sectors> InverseParent { get; set; }
+        public virtual ICollection<Sector> InverseParent { get; set; }
     }
 }
