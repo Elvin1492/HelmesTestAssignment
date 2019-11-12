@@ -1,0 +1,14 @@
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.dll
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.pdb
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\nunit.engine.netstandard.dll
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.Web.UnitTests.deps.json
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.Web.UnitTests.runtimeconfig.json
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.Web.UnitTests.runtimeconfig.dev.json
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.Web.UnitTests.dll
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.Web.UnitTests.pdb
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\obj\Debug\netcoreapp2.2\SectorApp.Web.UnitTests.csprojAssemblyReference.cache
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\obj\Debug\netcoreapp2.2\SectorApp.Web.UnitTests.csproj.CoreCompileInputs.cache
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\obj\Debug\netcoreapp2.2\SectorApp.Web.UnitTests.AssemblyInfoInputs.cache
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\obj\Debug\netcoreapp2.2\SectorApp.Web.UnitTests.AssemblyInfo.cs
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\obj\Debug\netcoreapp2.2\SectorApp.Web.UnitTests.dll
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\obj\Debug\netcoreapp2.2\SectorApp.Web.UnitTests.pdb
