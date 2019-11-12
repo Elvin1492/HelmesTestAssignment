@@ -1,6 +1,4 @@
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.DataAccess\bin\Debug\netcoreapp2.2\SectorApp.DataAccess.deps.json
-D:\Github\HelmesTestAssignment\SectorApp\SectorApp.DataAccess\bin\Debug\netcoreapp2.2\SectorApp.DataAccess.runtimeconfig.json
-D:\Github\HelmesTestAssignment\SectorApp\SectorApp.DataAccess\bin\Debug\netcoreapp2.2\SectorApp.DataAccess.runtimeconfig.dev.json
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.DataAccess\bin\Debug\netcoreapp2.2\SectorApp.DataAccess.dll
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.DataAccess\bin\Debug\netcoreapp2.2\SectorApp.DataAccess.pdb
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.DataAccess\obj\Debug\netcoreapp2.2\SectorApp.DataAccess.csprojAssemblyReference.cache

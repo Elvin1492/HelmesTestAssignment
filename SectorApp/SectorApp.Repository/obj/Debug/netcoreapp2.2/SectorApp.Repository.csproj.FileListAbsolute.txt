@@ -1,6 +1,4 @@
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Repository\bin\Debug\netcoreapp2.2\SectorApp.Repository.deps.json
-D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Repository\bin\Debug\netcoreapp2.2\SectorApp.Repository.runtimeconfig.json
-D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Repository\bin\Debug\netcoreapp2.2\SectorApp.Repository.runtimeconfig.dev.json
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Repository\bin\Debug\netcoreapp2.2\SectorApp.Repository.dll
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Repository\bin\Debug\netcoreapp2.2\SectorApp.Repository.pdb
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Repository\obj\Debug\netcoreapp2.2\SectorApp.Repository.csprojAssemblyReference.cache

@@ -1,8 +1,7 @@
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\bin\Debug\netcoreapp2.2\SectorApp.Service.deps.json
-D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\bin\Debug\netcoreapp2.2\SectorApp.Service.runtimeconfig.json
-D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\bin\Debug\netcoreapp2.2\SectorApp.Service.runtimeconfig.dev.json
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\bin\Debug\netcoreapp2.2\SectorApp.Service.dll
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\bin\Debug\netcoreapp2.2\SectorApp.Service.pdb
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\obj\Debug\netcoreapp2.2\SectorApp.Service.csprojAssemblyReference.cache
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\obj\Debug\netcoreapp2.2\SectorApp.Service.csproj.CoreCompileInputs.cache
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\obj\Debug\netcoreapp2.2\SectorApp.Service.AssemblyInfoInputs.cache
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\obj\Debug\netcoreapp2.2\SectorApp.Service.AssemblyInfo.cs
