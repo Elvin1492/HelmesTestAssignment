@@ -11,7 +11,7 @@ namespace SectorApp.Service
     {
         IEnumerable<TEntity> Get();
         TEntity GetSingle(int id);
-        TEntity SaveOrUpdate(TEntity entity);
+        TEntity SaveOrUpdate(TEntity usersSector);
         void Delete(TEntity entity);
     }
 
@@ -44,19 +44,19 @@ namespace SectorApp.Service
             }
         }
 
-        public TEntity SaveOrUpdate(TEntity entity)
+        public TEntity SaveOrUpdate(TEntity usersSector)
         {
             using (var tran = UnitOfWork.Context.Database.BeginTransaction())
             {
-                if (entity.IsNew)
+                if (usersSector.IsNew)
                 {
-                    var result = Repository.Add(entity);
+                    var result = Repository.Add(usersSector);
                     tran.Commit();
                     return result;
                 }
                 else
                 {
-                    var result = Repository.Update(entity);
+                    var result = Repository.Update(usersSector);
                     tran.Commit();
                     return result;
                 }

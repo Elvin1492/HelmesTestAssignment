@@ -13,11 +13,15 @@ export class HomeComponent implements OnInit {
 
   userForm: FormGroup;
 
-  constructor(private http: HttpClient, private fb: FormBuilder) { }
+  constructor(private http: HttpClient, private fb: FormBuilder) {
+    this.createForm();
+  }
 
   createForm() {
     this.userForm = this.fb.group({
-
+      Name: ['', Validators.required],
+      Sectors: [[], Validators.required],
+      AgreeAndTerms: [false, Validators.required]
     });
   }
 
@@ -27,10 +31,7 @@ export class HomeComponent implements OnInit {
     });
    
     this.selectedItems = [
-      //{ "Id": 2, "Name": "Singapore" },
-      //{ "Id": 3, "Name": "Australia" },
-      //{ "Id": 4, "Name": "Canada" },
-      //{ "Id": 5, "Name": "South Korea" }
+     
     ];
     this.dropdownSettings = {
       singleSelection: false,
@@ -43,6 +44,11 @@ export class HomeComponent implements OnInit {
       labelKey: "Name",
       searchBy: ['Name']
     };           
+  }
+
+  submitForm() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.userForm.value);
   }
 
   onItemSelect(item: any) {

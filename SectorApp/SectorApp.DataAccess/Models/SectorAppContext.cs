@@ -17,12 +17,13 @@ namespace SectorApp.DataAccess.Models
 
         public virtual DbSet<AppUser> AppUsers { get; set; }
         public virtual DbSet<Sector> Sectors { get; set; }
-        public virtual DbSet<UsersSectors> UsersSectors { get; set; }
+        public virtual DbSet<UsersSector> UsersSectors { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=MAMMADOVE10;Database=SectorApp;Trusted_Connection=True;");
             }
         }
@@ -45,18 +46,18 @@ namespace SectorApp.DataAccess.Models
                     .HasMaxLength(50);
 
                 entity.HasOne(d => d.Parent);
-                // .WithMany(p => p.InverseParent)
-                // .HasForeignKey(d => d.ParentId)
-                /// .HasConstraintName("FK_Sectors_Sectors");
+                //.WithMany(p => p.InverseParent)
+                //.HasForeignKey(d => d.ParentId)
+                //.HasConstraintName("FK_Sectors_Sectors");
             });
 
-            modelBuilder.Entity<UsersSectors>(entity =>
+            modelBuilder.Entity<UsersSector>(entity =>
             {
                 entity.Property(e => e.Id).ValueGeneratedNever();
 
                 entity.HasOne(d => d.IdNavigation)
                     .WithOne(p => p.UsersSectors)
-                    .HasForeignKey<UsersSectors>(d => d.Id)
+                    .HasForeignKey<UsersSector>(d => d.Id)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_UsersSectors_Sectors");
 
