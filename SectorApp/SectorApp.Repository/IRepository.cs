@@ -29,6 +29,7 @@ namespace SectorApp.Repository
         public T Add(T entity)
         {
            _sectorAppContext.Set<T>().Add(entity);
+           _sectorAppContext.SaveChanges();
            return entity;
         }
 

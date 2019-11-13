@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SectorApp.DataAccess.Models
 {
-    public class UsersSector : EntityBase
+    public partial class UsersSector:EntityBase
     {
         public int UserId { get; set; }
         public int SectorId { get; set; }

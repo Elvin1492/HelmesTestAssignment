@@ -53,7 +53,7 @@ namespace SectorApp.DataAccess.Models
 
             modelBuilder.Entity<UsersSector>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.Property(e => e.Id).ValueGeneratedOnAdd();
 
                 entity.HasOne(d => d.IdNavigation)
                     .WithOne(p => p.UsersSectors)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SectorApp.DataAccess.Models
 {
-    public class AppUser : EntityBase
+    public partial class AppUser:EntityBase
     {
         public AppUser()
         {

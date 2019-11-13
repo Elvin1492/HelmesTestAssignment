@@ -49,6 +49,9 @@ export class HomeComponent implements OnInit {
   submitForm() {
     // TODO: Use EventEmitter with form value
     console.warn(this.userForm.value);
+    this.http.post<any>('http://localhost:64965/api/appuser/create', this.userForm.value).subscribe(data => {
+      this.dropdownList = data;
+    });
   }
 
   onItemSelect(item: any) {
