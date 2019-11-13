@@ -7,7 +7,7 @@ namespace SectorApp.DataAccess.Models
     {
         public Sector()
         {
-            InverseParent = new HashSet<Sector>();
+           // InverseParent = new HashSet<Sector>();
         }
 
         public string Name { get; set; }
@@ -15,6 +15,6 @@ namespace SectorApp.DataAccess.Models
 
         public virtual Sector Parent { get; set; }
         public virtual UsersSectors UsersSectors { get; set; }
-        public virtual ICollection<Sector> InverseParent { get; set; }
+        //public virtual ICollection<Sector> InverseParent { get; set; }
     }
 }

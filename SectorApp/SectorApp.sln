@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SectorApp.Web", "SectorApp.Web\SectorApp.Web.csproj", "{82085521-D46A-49F1-8981-DEC05FAA1AA5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{72A5BD3A-7EC4-4D59-B1A8-53FF353A095E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SectorApp.Web.UnitTests", "SectorApp.Web.UnitTests\SectorApp.Web.UnitTests.csproj", "{39918F16-E454-446F-ABFC-4FF3DC330A37}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SectorApp.Service.UnitTests", "SectorApp.Service.UnitTests\SectorApp.Service.UnitTests.csproj", "{3669A4C5-5A7F-4275-B30A-0F81D74CD237}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SectorApp.Repository", "SectorApp.Repository\SectorApp.Repository.csproj", "{CBBA6950-9743-4370-AF49-ED8CD227C0DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SectorApp.Repository", "SectorApp.Repository\SectorApp.Repository.csproj", "{CBBA6950-9743-4370-AF49-ED8CD227C0DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SectorApp.Service", "SectorApp.Service\SectorApp.Service.csproj", "{C7C333CB-7E32-4084-B250-75534AB7C9E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SectorApp.Service", "SectorApp.Service\SectorApp.Service.csproj", "{C7C333CB-7E32-4084-B250-75534AB7C9E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SectorApp.Core", "SectorApp.Core\SectorApp.Core.csproj", "{199506B5-FD65-4BDA-8003-A7C266F61506}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SectorApp.Core", "SectorApp.Core\SectorApp.Core.csproj", "{199506B5-FD65-4BDA-8003-A7C266F61506}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SectorApp.DataAccess", "SectorApp.DataAccess\SectorApp.DataAccess.csproj", "{91C7BE77-F74D-409C-ABB1-CEADF8982A79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SectorApp.DataAccess", "SectorApp.DataAccess\SectorApp.DataAccess.csproj", "{91C7BE77-F74D-409C-ABB1-CEADF8982A79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SectorApp.Web.UI", "SectorApp.Web.UI\SectorApp.Web.UI.csproj", "{165008F0-71BF-4AF3-A49F-E9127BFD8090}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{82085521-D46A-49F1-8981-DEC05FAA1AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{82085521-D46A-49F1-8981-DEC05FAA1AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{82085521-D46A-49F1-8981-DEC05FAA1AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{82085521-D46A-49F1-8981-DEC05FAA1AA5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{39918F16-E454-446F-ABFC-4FF3DC330A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{39918F16-E454-446F-ABFC-4FF3DC330A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39918F16-E454-446F-ABFC-4FF3DC330A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,6 +49,10 @@ Global
 		{91C7BE77-F74D-409C-ABB1-CEADF8982A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91C7BE77-F74D-409C-ABB1-CEADF8982A79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91C7BE77-F74D-409C-ABB1-CEADF8982A79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{165008F0-71BF-4AF3-A49F-E9127BFD8090}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{165008F0-71BF-4AF3-A49F-E9127BFD8090}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{165008F0-71BF-4AF3-A49F-E9127BFD8090}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{165008F0-71BF-4AF3-A49F-E9127BFD8090}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

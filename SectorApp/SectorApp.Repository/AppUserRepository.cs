@@ -3,7 +3,7 @@ using SectorApp.DataAccess.Models;
 
 namespace SectorApp.Repository
 {
-    public interface IAppUserRepository:IRepository<AppUser>
+    public interface IAppUserRepository : IRepository<AppUser>
     {
 
     }
