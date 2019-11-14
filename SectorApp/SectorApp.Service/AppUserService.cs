@@ -1,4 +1,6 @@
-﻿using SectorApp.DataAccess.Models;
+﻿using System.Linq;
+using Microsoft.EntityFrameworkCore.Internal;
+using SectorApp.DataAccess.Models;
 using SectorApp.Repository;
 using SectorApp.Repository.Infrastructure;
 using SectorApp.Service.Models;
@@ -21,15 +23,16 @@ namespace SectorApp.Service
             _userSectorsRepository = userSectorsRepository;
         }
 
-        public AppUser SaveOrUpdate(UserSectorsModel userSectors)
+        public AppUser SaveOrUpdate(UserSectorsModel userSectorsModel)
         {
             using (var tran = UnitOfWork.Context.Database.BeginTransaction())
             {
-                if (userSectors.IsNew)
+                var id = 0;
+                if (userSectorsModel.IsNew)
                 {
-                    var user = _appUserRepository.Add(new AppUser() { Name = userSectors.Name, TermsIsAccepted = userSectors.TermsIsAccepted });
+                    var user = _appUserRepository.Add(new AppUser() { Name = userSectorsModel.Name, TermsIsAccepted = userSectorsModel.TermsIsAccepted });
 
-                    foreach (var sector in userSectors.Sectors)
+                    foreach (var sector in userSectorsModel.Sectors)
                     {
                         _userSectorsRepository.Add(new UsersSector()
                         {
@@ -38,28 +41,36 @@ namespace SectorApp.Service
                         });
                     }
 
+                    id = user.Id;
                 }
                 else
                 {
                     _appUserRepository.Update(new AppUser()
                     {
-                        Id = userSectors.Id,
-                        Name = userSectors.Name,
-                        TermsIsAccepted = true
+                        Id = userSectorsModel.Id,
+                        Name = userSectorsModel.Name,
+                        TermsIsAccepted = true,
+                        UsersSectors = null
                     });
 
-                    foreach (var sector in userSectors.Sectors)
+                    _userSectorsRepository.DeleteWhere(x => x.UserId == userSectorsModel.Id);
+
+                    foreach (var sector in userSectorsModel.Sectors)
                     {
                         _userSectorsRepository.Add(new UsersSector()
                         {
                             SectorId = sector.Id,
-                            UserId = userSectors.Id
+                            UserId = userSectorsModel.Id
                         });
                     }
+
+                    id = userSectorsModel.Id;
                 }
                 tran.Commit();
+                var result = _appUserRepository.Get(id);
+                return result;
             }
-            return null;
+
         }
     }
 }

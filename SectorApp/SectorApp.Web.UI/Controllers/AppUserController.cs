@@ -1,11 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http;
+using SectorApp.DataAccess.Models;
 using SectorApp.Service;
 using SectorApp.Service.Models;
 
 namespace SectorApp.Web.UI.Controllers
 {
     [Route("api/[controller]")]
-    public class AppUserController : Controller
+    [ApiController]
+    public class AppUserController : ControllerBase
     {
         private readonly IAppUserService _appUserService;
 
@@ -16,18 +23,21 @@ namespace SectorApp.Web.UI.Controllers
 
         [HttpPost]
         [Route("[action]")]
-        public ActionResult Create([FromBody] UserSectorsModel model)
+        public AppUser Create([FromBody] UserSectorsModel model)
         {
-            _appUserService.SaveOrUpdate(model);
-            return Ok();
+            if (!ModelState.IsValid) throw new InvalidOperationException(
+                "All fields are required");
+            var result = _appUserService.SaveOrUpdate(model);
+            return result;
+
         }
 
         [HttpGet]
         [Route("[action]")]
-        public ActionResult Get()
+        public ICollection<AppUser> Get()
         {
             var result = _appUserService.Get();
-            return Json(result);
+            return result.ToList();
         }
     }
 }

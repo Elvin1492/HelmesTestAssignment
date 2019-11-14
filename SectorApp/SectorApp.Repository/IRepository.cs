@@ -15,6 +15,7 @@ namespace SectorApp.Repository
         T Get(int id);
         T Add(T entity);
         void Delete(T entity);
+        IEnumerable<T> DeleteWhere(Expression<Func<T, bool>> predicate);
         T Update(T entity);
     }
 
@@ -38,6 +39,20 @@ namespace SectorApp.Repository
             T existing = _sectorAppContext.Set<T>().Find(entity);
             if (existing != null) _sectorAppContext.Set<T>().Remove(existing);
         }
+
+        public IEnumerable<T> DeleteWhere(Expression<Func<T, bool>> predicate)
+        {
+            IEnumerable<T> entities = _sectorAppContext.Set<T>().Where(predicate);
+
+            foreach (var entity in entities)
+            {
+                _sectorAppContext.Entry<T>(entity).State = EntityState.Deleted;
+            }
+
+            _sectorAppContext.SaveChanges();
+            return entities;
+        }
+
 
         public IEnumerable<T> Get()
         {

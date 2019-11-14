@@ -12,3 +12,16 @@ D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\obj\Debug\netco
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\obj\Debug\netcoreapp2.2\SectorApp.Web.UnitTests.AssemblyInfo.cs
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\obj\Debug\netcoreapp2.2\SectorApp.Web.UnitTests.dll
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\obj\Debug\netcoreapp2.2\SectorApp.Web.UnitTests.pdb
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.Core.dll
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.DataAccess.dll
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.Repository.dll
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.Service.dll
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.Service.pdb
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.Core.pdb
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.DataAccess.pdb
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.Repository.pdb
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\obj\Debug\netcoreapp2.2\SectorApp.Web.UnitTests.csproj.CopyComplete
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.Web.UI.Views.dll
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.Web.UI.Views.pdb
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.Web.UI.dll
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Web.UnitTests\bin\Debug\netcoreapp2.2\SectorApp.Web.UI.pdb

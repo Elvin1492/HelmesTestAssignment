@@ -11,7 +11,7 @@ namespace SectorApp.Web.UI.Infrastructure.Helpers
         public IEnumerable<TreeItem<T>> Children { get; set; }
     }
 
-    internal static class GenericHelpers
+    public static class GenericHelpers
     {
         public static IEnumerable<TreeItem<T>> GenerateTree<T, TK>(
             this IEnumerable<T> collection,
@@ -28,24 +28,6 @@ namespace SectorApp.Web.UI.Infrastructure.Helpers
                     Children = enumerable.GenerateTree(idSelector, parentIdSelector, idSelector(c))
                 };
             }
-        }
-    }
-
-    public static class StringExtensions
-    {
-        public static string Repeat(this char chatToRepeat, int repeat)
-        {
-
-            return new string(chatToRepeat, repeat);
-        }
-        public static string Repeat(this string stringToRepeat, int repeat)
-        {
-            var builder = new StringBuilder(repeat * stringToRepeat.Length);
-            for (int i = 0; i < repeat; i++)
-            {
-                builder.Append(stringToRepeat);
-            }
-            return builder.ToString();
         }
     }
 }

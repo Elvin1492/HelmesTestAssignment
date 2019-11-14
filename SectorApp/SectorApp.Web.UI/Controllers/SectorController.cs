@@ -8,7 +8,8 @@ using SectorApp.Web.UI.Infrastructure.Helpers;
 namespace SectorApp.Web.UI.Controllers
 {
     [Route("api/[controller]")]
-    public class SectorController : Controller
+    [ApiController]
+    public class SectorController : ControllerBase
     {
         private readonly ISectorService _sectorService;
 
@@ -18,13 +19,13 @@ namespace SectorApp.Web.UI.Controllers
         }
 
         [HttpGet("[action]")]
-        public ActionResult<IEnumerable<Sector>> GetSectors()
+        public ICollection<Sector> GetSectors()
         {
             var result = _sectorService.Get();
             var tree = result.ToList().GenerateTree(x => x.Id, x => x.ParentId);
             List<Sector> list = new List<Sector>();
             CreateSequentialTree(tree.ToList(),list, 0);
-            return Json(list);
+            return list;
         }
 
         private void CreateSequentialTree(List<TreeItem<Sector>> treeItems, List<Sector> list, int deep = 0)

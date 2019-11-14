@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   dropdownList = [];
   selectedItems = [];
   dropdownSettings = {};
-
+  success = false;
   userForm: FormGroup;
 
   constructor(private http: HttpClient, private fb: FormBuilder) {
@@ -19,6 +19,7 @@ export class HomeComponent implements OnInit {
 
   createForm() {
     this.userForm = this.fb.group({
+      Id: 0,
       Name: ['', Validators.required],
       Sectors: [[], Validators.required],
       AgreeAndTerms: [false, Validators.required]
@@ -35,11 +36,10 @@ export class HomeComponent implements OnInit {
     ];
     this.dropdownSettings = {
       singleSelection: false,
-      text: "Select Countries",
+      text: "Select Sectors",
       selectAllText: 'Select All',
       unSelectAllText: 'UnSelect All',
       enableSearchFilter: true,
-      classes: "myclass custom-class",
       primaryKey: "Id",
       labelKey: "Name",
       searchBy: ['Name']
@@ -47,10 +47,17 @@ export class HomeComponent implements OnInit {
   }
 
   submitForm() {
-    // TODO: Use EventEmitter with form value
     console.warn(this.userForm.value);
     this.http.post<any>('http://localhost:64965/api/appuser/create', this.userForm.value).subscribe(data => {
-      this.dropdownList = data;
+      this.userForm.patchValue({
+        Id: data.Id
+      });
+      this.success = true;
+      setTimeout(() => {
+        this.success = false;
+      }, 10000);
+    }, error => {
+      console.log(error);
     });
   }
 
