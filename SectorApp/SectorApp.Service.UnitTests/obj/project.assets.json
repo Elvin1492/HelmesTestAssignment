@@ -7152,6 +7152,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "EntityFrameworkCoreMock.Moq >= 1.0.0.26",
+      "Microsoft.EntityFrameworkCore >= 2.2.6",
       "Microsoft.NET.Test.Sdk >= 15.9.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Moq >= 4.13.1",
@@ -7212,6 +7213,10 @@
           "EntityFrameworkCoreMock.Moq": {
             "target": "Package",
             "version": "[1.0.0.26, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[2.2.6, )"
           },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",

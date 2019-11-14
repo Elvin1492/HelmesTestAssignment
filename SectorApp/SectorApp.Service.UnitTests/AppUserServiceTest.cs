@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using EntityFrameworkCoreMock;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
@@ -14,32 +16,55 @@ namespace SectorApp.Service.UnitTests
     [TestFixture]
     public class AppUserServiceTest
     {
-        private Mock<IAppUserRepository> _appUserRepository;
-        private Mock<IUserSectorsRepository> _appUserRepositoryMock;
+        private Mock<IAppUserRepository> _appUserRepositoryMock;
+        private Mock<IUserSectorsRepository> _userSectorsRepository;
         private Mock<IUnitOfWork> _unitOfWorkMock;
         private AppUserService _appUserService;
-        private DbContextOptions _contextOptions;
-        private DbContextMock<SectorAppContext> _contextMock;
+        private SectorAppContext _sectorAppContext;
 
         [SetUp]
         public void Setup()
         {
-            _contextOptions = new DbContextOptionsBuilder<SectorAppContext>().Options;
-            _contextMock = new DbContextMock<SectorAppContext>(_contextOptions);
             _unitOfWorkMock = new Mock<IUnitOfWork>();
-            _appUserRepository = new Mock<IAppUserRepository>();
-            _appUserRepositoryMock = new Mock<IUserSectorsRepository>();
+            _appUserRepositoryMock = new Mock<IAppUserRepository>();
+            _userSectorsRepository = new Mock<IUserSectorsRepository>();
 
-            _appUserService = new AppUserService(_unitOfWorkMock.Object,_appUserRepository.Object, _appUserRepositoryMock.Object);
+            _appUserService = new AppUserService(_unitOfWorkMock.Object,_appUserRepositoryMock.Object, _userSectorsRepository.Object);
+            var optionsBuilder = new DbContextOptionsBuilder<SectorAppContext>();
+            optionsBuilder.UseSqlServer("Server=MAMMADOVE10;Database=SectorApp;Trusted_Connection=True;");
+            _sectorAppContext = new SectorAppContext(optionsBuilder.Options);
         }
 
         [Test]
-        public void SaveOrUpdate_Create()
+        public void SaveOrUpdate_IsNew_Create()
         {
-            _contextMock.SetupGet(x => x.Database).Returns(new DatabaseFacade(_contextMock.Object));
-            //_contextMock.Setup(x => x.Database.BeginTransaction()).Returns(null);
+            var model = GetAppUser();
+            _unitOfWorkMock.SetupGet(x => x.Context).Returns(_sectorAppContext);
 
-            Assert.Pass();
+            _appUserRepositoryMock.Setup(x => x.Add(It.IsAny<AppUser>())).Returns(model);
+            _appUserRepositoryMock.Setup(x => x.Get(1)).Returns(model);
+
+            var result = _appUserService.SaveOrUpdate(GetUserSectorsModel());
+
+
+            Assert.That(result.Id, Is.EqualTo(1));
+        }
+
+        [Test]
+        public void SaveOrUpdate_IsNotNew_Update()
+        {
+            var appUser = GetAppUser();
+            _unitOfWorkMock.SetupGet(x => x.Context).Returns(_sectorAppContext);
+
+            _appUserRepositoryMock.Setup(x => x.Update(It.IsAny<AppUser>())).Returns(appUser);
+            _appUserRepositoryMock.Setup(x => x.Get(1)).Returns(appUser);
+
+            var model = GetUserSectorsModel();
+            model.Id = 1;
+            var result = _appUserService.SaveOrUpdate(model);
+
+
+            Assert.That(result.Id, Is.EqualTo(1));
         }
 
         private UserSectorsModel GetUserSectorsModel()
@@ -47,6 +72,17 @@ namespace SectorApp.Service.UnitTests
             return  new UserSectorsModel
             {
                 Id = 0,
+                TermsIsAccepted = true,
+                Name = "Test",
+                Sectors = new List<Sector>()
+            };
+        }
+
+        private AppUser GetAppUser()
+        {
+            return new AppUser
+            {
+                Id = 1,
                 TermsIsAccepted = true,
                 Name = "Test"
             };

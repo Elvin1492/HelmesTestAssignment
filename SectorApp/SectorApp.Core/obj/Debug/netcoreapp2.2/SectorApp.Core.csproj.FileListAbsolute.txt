@@ -6,4 +6,3 @@ D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Core\obj\Debug\netcoreapp2.2\
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Core\obj\Debug\netcoreapp2.2\SectorApp.Core.AssemblyInfo.cs
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Core\obj\Debug\netcoreapp2.2\SectorApp.Core.dll
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Core\obj\Debug\netcoreapp2.2\SectorApp.Core.pdb
-D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Core\obj\Debug\netcoreapp2.2\SectorApp.Core.csprojAssemblyReference.cache
