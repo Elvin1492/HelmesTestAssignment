@@ -7,10 +7,8 @@ D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\obj\Debug\netcoreapp2
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\obj\Debug\netcoreapp2.2\SectorApp.Service.AssemblyInfo.cs
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\obj\Debug\netcoreapp2.2\SectorApp.Service.dll
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\obj\Debug\netcoreapp2.2\SectorApp.Service.pdb
-D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\bin\Debug\netcoreapp2.2\SectorApp.Core.dll
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\bin\Debug\netcoreapp2.2\SectorApp.DataAccess.dll
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\bin\Debug\netcoreapp2.2\SectorApp.Repository.dll
-D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\bin\Debug\netcoreapp2.2\SectorApp.Core.pdb
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\bin\Debug\netcoreapp2.2\SectorApp.DataAccess.pdb
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\bin\Debug\netcoreapp2.2\SectorApp.Repository.pdb
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.Service\obj\Debug\netcoreapp2.2\SectorApp.Service.csproj.CopyComplete

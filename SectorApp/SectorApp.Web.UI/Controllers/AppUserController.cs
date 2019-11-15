@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Server.Kestrel.Core;
-using Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http;
 using SectorApp.DataAccess.Models;
 using SectorApp.Service;
 using SectorApp.Service.Models;

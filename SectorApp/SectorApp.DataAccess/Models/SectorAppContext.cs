@@ -1,10 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace SectorApp.DataAccess.Models
 {
-    public partial class SectorAppContext : DbContext
+    public class SectorAppContext : DbContext
     {
         public SectorAppContext()
         {
@@ -23,7 +21,6 @@ namespace SectorApp.DataAccess.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=MAMMADOVE10;Database=SectorApp;Trusted_Connection=True;");
             }
         }
@@ -46,9 +43,6 @@ namespace SectorApp.DataAccess.Models
                     .HasMaxLength(50);
 
                 entity.HasOne(d => d.Parent);
-                //.WithMany(p => p.InverseParent)
-                //.HasForeignKey(d => d.ParentId)
-                //.HasConstraintName("FK_Sectors_Sectors");
             });
 
             modelBuilder.Entity<UsersSector>(entity =>

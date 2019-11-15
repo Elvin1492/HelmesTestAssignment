@@ -31,7 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SectorApp.Core\SectorApp.Core.csproj" />
     <ProjectReference Include="..\SectorApp.DataAccess\SectorApp.DataAccess.csproj" />
     <ProjectReference Include="..\SectorApp.Repository\SectorApp.Repository.csproj" />
     <ProjectReference Include="..\SectorApp.Service\SectorApp.Service.csproj" />

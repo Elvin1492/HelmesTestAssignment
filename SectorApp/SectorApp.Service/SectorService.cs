@@ -10,10 +10,11 @@ namespace SectorApp.Service
     }
     public class SectorService:ServiceBase<Sector>, ISectorService
     {
-        private readonly ISectorRepository _sectorRepository;
+        public ISectorRepository SectorRepository { get; }
+
         public SectorService(IUnitOfWork unitOfWork, ISectorRepository repository) : base(unitOfWork, repository)
         {
-            _sectorRepository = repository;
+            SectorRepository = repository;
         }
     }
 }

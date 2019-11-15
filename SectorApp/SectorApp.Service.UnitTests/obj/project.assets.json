@@ -2086,16 +2086,6 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "SectorApp.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "compile": {
-          "bin/placeholder/SectorApp.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SectorApp.Core.dll": {}
-        }
-      },
       "SectorApp.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -2127,7 +2117,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "SectorApp.Core": "1.0.0",
           "SectorApp.DataAccess": "1.0.0",
           "SectorApp.Repository": "1.0.0"
         },
@@ -7127,11 +7116,6 @@
         "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
-    },
-    "SectorApp.Core/1.0.0": {
-      "type": "project",
-      "path": "../SectorApp.Core/SectorApp.Core.csproj",
-      "msbuildProject": "../SectorApp.Core/SectorApp.Core.csproj"
     },
     "SectorApp.DataAccess/1.0.0": {
       "type": "project",

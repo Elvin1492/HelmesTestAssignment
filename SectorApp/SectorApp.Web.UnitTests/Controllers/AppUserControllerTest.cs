@@ -1,12 +1,12 @@
-﻿using Moq;
+﻿using System.Collections.Generic;
+using Moq;
 using NUnit.Framework;
 using SectorApp.DataAccess.Models;
 using SectorApp.Service;
 using SectorApp.Service.Models;
 using SectorApp.Web.UI.Controllers;
-using System.Collections.Generic;
 
-namespace Tests.Controllers
+namespace SectorApp.Web.UnitTests.Controllers
 {
     [TestFixture]
     public class AppUserControllerTest
@@ -72,14 +72,8 @@ namespace Tests.Controllers
         {
             return new[]
             {
-                new AppUser
-                {
-                    
-                },
-                new AppUser
-                {
-
-                }
+                new AppUser(),
+                new AppUser()
             };
         }
     }

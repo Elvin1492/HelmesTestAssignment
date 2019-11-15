@@ -13,11 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SectorApp.Repository", "Sec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SectorApp.Service", "SectorApp.Service\SectorApp.Service.csproj", "{C7C333CB-7E32-4084-B250-75534AB7C9E8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SectorApp.Core", "SectorApp.Core\SectorApp.Core.csproj", "{199506B5-FD65-4BDA-8003-A7C266F61506}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SectorApp.DataAccess", "SectorApp.DataAccess\SectorApp.DataAccess.csproj", "{91C7BE77-F74D-409C-ABB1-CEADF8982A79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SectorApp.Web.UI", "SectorApp.Web.UI\SectorApp.Web.UI.csproj", "{165008F0-71BF-4AF3-A49F-E9127BFD8090}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SectorApp.Web.UI", "SectorApp.Web.UI\SectorApp.Web.UI.csproj", "{165008F0-71BF-4AF3-A49F-E9127BFD8090}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +39,6 @@ Global
 		{C7C333CB-7E32-4084-B250-75534AB7C9E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7C333CB-7E32-4084-B250-75534AB7C9E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7C333CB-7E32-4084-B250-75534AB7C9E8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{199506B5-FD65-4BDA-8003-A7C266F61506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{199506B5-FD65-4BDA-8003-A7C266F61506}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{199506B5-FD65-4BDA-8003-A7C266F61506}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{199506B5-FD65-4BDA-8003-A7C266F61506}.Release|Any CPU.Build.0 = Release|Any CPU
 		{91C7BE77-F74D-409C-ABB1-CEADF8982A79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{91C7BE77-F74D-409C-ABB1-CEADF8982A79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91C7BE77-F74D-409C-ABB1-CEADF8982A79}.Release|Any CPU.ActiveCfg = Release|Any CPU

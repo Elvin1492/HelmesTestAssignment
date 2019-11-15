@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using SectorApp.DataAccess.Models;
 
 namespace SectorApp.Web.UI.Infrastructure.Helpers
 {
@@ -27,6 +27,16 @@ namespace SectorApp.Web.UI.Infrastructure.Helpers
                     Item = c,
                     Children = enumerable.GenerateTree(idSelector, parentIdSelector, idSelector(c))
                 };
+            }
+        }
+
+        public static void CreateSequentialTree(List<TreeItem<Sector>> treeItems, List<Sector> list, int deep = 0)
+        {
+            for (var i = 0; i < treeItems.Count(); i++)
+            {
+                treeItems[i].Item.Name = new string('\xa0', deep * 6) + treeItems[i].Item.Name;
+                list.Add(treeItems[i].Item);
+                CreateSequentialTree(treeItems[i].Children.ToList(), list, deep + 1);
             }
         }
     }

@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v2.2": {
       "SectorApp.Service/1.0.0": {
         "dependencies": {
-          "SectorApp.Core": "1.0.0",
           "SectorApp.DataAccess": "1.0.0",
           "SectorApp.Repository": "1.0.0"
         },
@@ -502,11 +501,6 @@
           "System.Runtime": "4.1.0"
         }
       },
-      "SectorApp.Core/1.0.0": {
-        "runtime": {
-          "SectorApp.Core.dll": {}
-        }
-      },
       "SectorApp.DataAccess/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "2.2.6",
@@ -902,11 +896,6 @@
       "sha512": "sha512-k1S4Gc6IGwtHGT8188RSeGaX86Qw/wnrgNLshJvsdNUOPP9etMmo8S07c+UlOAx4K/xLuN9ivA1bD0LVurtIxQ==",
       "path": "system.threading.tasks/4.0.11",
       "hashPath": "system.threading.tasks.4.0.11.nupkg.sha512"
-    },
-    "SectorApp.Core/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "SectorApp.DataAccess/1.0.0": {
       "type": "project",

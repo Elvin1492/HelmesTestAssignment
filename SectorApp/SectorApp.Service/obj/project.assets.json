@@ -907,16 +907,6 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "SectorApp.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "compile": {
-          "bin/placeholder/SectorApp.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SectorApp.Core.dll": {}
-        }
-      },
       "SectorApp.DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -3495,11 +3485,6 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "SectorApp.Core/1.0.0": {
-      "type": "project",
-      "path": "../SectorApp.Core/SectorApp.Core.csproj",
-      "msbuildProject": "../SectorApp.Core/SectorApp.Core.csproj"
-    },
     "SectorApp.DataAccess/1.0.0": {
       "type": "project",
       "path": "../SectorApp.DataAccess/SectorApp.DataAccess.csproj",
@@ -3514,7 +3499,6 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.NETCore.App >= 2.2.0",
-      "SectorApp.Core >= 1.0.0",
       "SectorApp.DataAccess >= 1.0.0",
       "SectorApp.Repository >= 1.0.0"
     ]
@@ -3549,9 +3533,6 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "D:\\Github\\HelmesTestAssignment\\SectorApp\\SectorApp.Core\\SectorApp.Core.csproj": {
-              "projectPath": "D:\\Github\\HelmesTestAssignment\\SectorApp\\SectorApp.Core\\SectorApp.Core.csproj"
-            },
             "D:\\Github\\HelmesTestAssignment\\SectorApp\\SectorApp.DataAccess\\SectorApp.DataAccess.csproj": {
               "projectPath": "D:\\Github\\HelmesTestAssignment\\SectorApp\\SectorApp.DataAccess\\SectorApp.DataAccess.csproj"
             },

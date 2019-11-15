@@ -1,9 +1,5 @@
-using System;
 using System.Collections.Generic;
-using EntityFrameworkCoreMock;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Storage;
 using Moq;
 using NUnit.Framework;
 using SectorApp.DataAccess.Models;
@@ -78,7 +74,7 @@ namespace SectorApp.Service.UnitTests
             };
         }
 
-        private AppUser GetAppUser()
+        private static AppUser GetAppUser()
         {
             return new AppUser
             {

@@ -3,9 +3,6 @@ using NUnit.Framework;
 using SectorApp.DataAccess.Models;
 using SectorApp.Service;
 using SectorApp.Web.UI.Controllers;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace SectorApp.Web.UnitTests.Controllers
 {

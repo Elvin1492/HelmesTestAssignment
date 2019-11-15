@@ -23,20 +23,9 @@ namespace SectorApp.Web.UI.Controllers
         {
             var result = _sectorService.Get();
             var tree = result.ToList().GenerateTree(x => x.Id, x => x.ParentId);
-            List<Sector> list = new List<Sector>();
-            CreateSequentialTree(tree.ToList(),list, 0);
+            var list = new List<Sector>();
+            GenericHelpers.CreateSequentialTree(tree.ToList(),list);
             return list;
         }
-
-        private void CreateSequentialTree(List<TreeItem<Sector>> treeItems, List<Sector> list, int deep = 0)
-        {
-            for (int i = 0; i < treeItems.Count(); i++)
-            {
-                treeItems[i].Item.Name = new string('\xa0', deep * 10) + treeItems[i].Item.Name;
-                list.Add(treeItems[i].Item);
-                CreateSequentialTree(treeItems[i].Children.ToList(),list, deep + 1);
-            }
-        }
-
     }
 }

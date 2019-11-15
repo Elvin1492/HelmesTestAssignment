@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using Microsoft.EntityFrameworkCore.Internal;
-using SectorApp.DataAccess.Models;
+﻿using SectorApp.DataAccess.Models;
 using SectorApp.Repository;
 using SectorApp.Repository.Infrastructure;
 using SectorApp.Service.Models;
@@ -27,7 +25,7 @@ namespace SectorApp.Service
         {
             using (var tran = UnitOfWork.Context.Database.BeginTransaction())
             {
-                var id = 0;
+                int id;
                 if (userSectorsModel.IsNew)
                 {
                     var user = _appUserRepository.Add(new AppUser() { Name = userSectorsModel.Name, TermsIsAccepted = userSectorsModel.TermsIsAccepted });

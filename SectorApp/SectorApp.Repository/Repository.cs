@@ -4,7 +4,6 @@ using System.Linq;
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using SectorApp.DataAccess.Models;
-using SectorApp.Repository.Infrastructure;
 
 namespace SectorApp.Repository
 {
@@ -36,7 +35,7 @@ namespace SectorApp.Repository
 
         public void Delete(T entity)
         {
-            T existing = _sectorAppContext.Set<T>().Find(entity);
+            var existing = _sectorAppContext.Set<T>().Find(entity);
             if (existing != null) _sectorAppContext.Set<T>().Remove(existing);
         }
 
@@ -46,7 +45,7 @@ namespace SectorApp.Repository
 
             foreach (var entity in entities)
             {
-                _sectorAppContext.Entry<T>(entity).State = EntityState.Deleted;
+                _sectorAppContext.Entry(entity).State = EntityState.Deleted;
             }
 
             _sectorAppContext.SaveChanges();
@@ -56,12 +55,12 @@ namespace SectorApp.Repository
 
         public IEnumerable<T> Get()
         {
-            return _sectorAppContext.Set<T>().AsEnumerable<T>();
+            return _sectorAppContext.Set<T>().AsEnumerable();
         }
 
-        public IEnumerable<T> Get(System.Linq.Expressions.Expression<Func<T, bool>> predicate)
+        public IEnumerable<T> Get(Expression<Func<T, bool>> predicate)
         {
-            return _sectorAppContext.Set<T>().Where(predicate).AsEnumerable<T>();
+            return _sectorAppContext.Set<T>().Where(predicate).AsEnumerable();
         }
 
         public T Get(int id)
