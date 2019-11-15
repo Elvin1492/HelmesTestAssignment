@@ -21,9 +21,9 @@ namespace SectorApp.Repository
     public class Repository<T> : IRepository<T> where T : class
     {
         private readonly SectorAppContext _sectorAppContext;
-        public Repository(SectorAppContext unitOfWork)
+        public Repository(SectorAppContext sectorAppContext)
         {
-            _sectorAppContext = unitOfWork;
+            _sectorAppContext = sectorAppContext;
         }
 
         public T Add(T entity)

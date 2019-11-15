@@ -6,3 +6,4 @@ D:\Github\HelmesTestAssignment\SectorApp\SectorApp.DataAccess\obj\Debug\netcorea
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.DataAccess\obj\Debug\netcoreapp2.2\SectorApp.DataAccess.AssemblyInfo.cs
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.DataAccess\obj\Debug\netcoreapp2.2\SectorApp.DataAccess.dll
 D:\Github\HelmesTestAssignment\SectorApp\SectorApp.DataAccess\obj\Debug\netcoreapp2.2\SectorApp.DataAccess.pdb
+D:\Github\HelmesTestAssignment\SectorApp\SectorApp.DataAccess\obj\Debug\netcoreapp2.2\SectorApp.DataAccess.csprojAssemblyReference.cache

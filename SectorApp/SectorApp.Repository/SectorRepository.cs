@@ -8,7 +8,7 @@ namespace SectorApp.Repository
     }
     public class SectorRepository : Repository<Sector>, ISectorRepository
     {
-        public SectorRepository(SectorAppContext unitOfWork) : base(unitOfWork)
+        public SectorRepository(SectorAppContext sectorAppContext) : base(sectorAppContext)
         {
         }
     }

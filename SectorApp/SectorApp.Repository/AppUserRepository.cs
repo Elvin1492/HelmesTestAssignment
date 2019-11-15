@@ -10,7 +10,7 @@ namespace SectorApp.Repository
 
     public class AppUserRepository : Repository<AppUser>, IAppUserRepository
     {
-        public AppUserRepository(SectorAppContext unitOfWork) : base(unitOfWork)
+        public AppUserRepository(SectorAppContext sectorAppContext) : base(sectorAppContext)
         {
         }
     }
