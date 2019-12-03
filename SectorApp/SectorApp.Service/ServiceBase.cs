@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using SectorApp.DataAccess.Models;
 using SectorApp.Repository;
 using SectorApp.Repository.Infrastructure;
@@ -46,18 +47,27 @@ namespace SectorApp.Service
         {
             using (var tran = UnitOfWork.Context.Database.BeginTransaction())
             {
-                if (usersSector.IsNew)
+                try
                 {
-                    var result = Repository.Add(usersSector);
-                    tran.Commit();
-                    return result;
+                    if (usersSector.IsNew)
+                    {
+                        var result = Repository.Add(usersSector);
+                        tran.Commit();
+                        return result;
+                    }
+                    else
+                    {
+                        var result = Repository.Update(usersSector);
+                        tran.Commit();
+                        return result;
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    var result = Repository.Update(usersSector);
-                    tran.Commit();
-                    return result;
+                    tran.Rollback();
+                    throw;
                 }
+
             }
         }
 
@@ -65,8 +75,17 @@ namespace SectorApp.Service
         {
             using (var tran = UnitOfWork.Context.Database.BeginTransaction())
             {
-                Repository.Delete(entity);
-                tran.Commit();
+                try
+                {
+                    Repository.Delete(entity);
+                    tran.Commit();
+                }
+                catch (Exception)
+                {
+                    tran.Rollback();
+                    throw;
+                }
+
             }
         }
     }
